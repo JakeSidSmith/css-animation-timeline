@@ -1,3 +1,5 @@
+import './livereload';
+
 import { polyfill } from 'raf';
 polyfill(global);
 
