@@ -4,7 +4,7 @@
   "description": "Timeline interface for making CSS animations",
   "main": "build/js/index.js",
   "scripts": {
-    "start": "./scripts/build",
+    "start": "./scripts/start",
     "build": "./scripts/build",
     "tests": "jest",
     "lint": "tslint --project tsconfig.json --type-check '@(src|tests|types)/**/*.@(ts|tsx)'",
