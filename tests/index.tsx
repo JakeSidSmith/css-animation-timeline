@@ -1,25 +1,6 @@
-const dispatchMock = jest.fn();
-
-const mockApp = () => {
-  // Require the un-mocked module to prevent infinite loop
-  const original = require.requireActual('../src/ts/app');
-  const { App: OriginalApp } = original;
-
-  // Construct a mock from a combination of the original module & a new default
-  return {
-    ...original,
-    // Prepropulate our mock
-    default: (props: any) => <OriginalApp {...props} count={5} dispatch={dispatchMock} />
-  };
-};
-
-// We have to keep our mock function outside of this context so jest doesn't complain
-jest.mock('../src/ts/app', () => mockApp());
-
-import { mount } from 'enzyme';
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-import App, { mapStateToProps } from '../src/ts/app';
+import App from '../src/ts/app';
 
 describe('App', () => {
 
@@ -30,19 +11,5 @@ describe('App', () => {
 
     expect(tree).toMatchSnapshot();
   });
-
-  it('should trigger the increment action', () => {
-    const wrapper = mount(<App />);
-
-    expect(dispatchMock).not.toHaveBeenCalled();
-
-    wrapper.find('button').simulate('click');
-
-    expect(dispatchMock).toHaveBeenCalledWith({type: 'INCREMENT'});
-  });
-
-  it('should return the required props', () => {
-    expect(mapStateToProps({counter: 3, foo: 'bar', num: 7} as any)).toEqual({count: 3});
-  })
 
 });

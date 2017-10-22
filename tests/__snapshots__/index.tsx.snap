@@ -1,13 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App should match snapshot 1`] = `
-<p>
-  Count: 
-  5
-  <button
-    onClick={[Function]}
+<div
+  className="app"
+>
+  <div
+    className="preview-area"
   >
-    Increment
-  </button>
-</p>
+    Preview area
+  </div>
+  <div
+    className="layers-area"
+  >
+    Layers area
+  </div>
+  <div
+    className="timeline-area"
+  >
+    Timeline area
+  </div>
+</div>
 `;

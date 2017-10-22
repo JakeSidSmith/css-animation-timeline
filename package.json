@@ -73,7 +73,7 @@
       "src/**/*.(jsx|jsx|ts|tsx)"
     ],
     "coveragePathIgnorePatterns": [
-      "src/ts/index.tsx?$"
+      "src/ts/(index|livereload).tsx?$"
     ],
     "coverageThreshold": {
       "global": {
