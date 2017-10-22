@@ -42,7 +42,8 @@
     "react-redux": "5.0.6",
     "redux": "3.7.2",
     "tsify": "3.0.3",
-    "typescript": "2.5.3"
+    "typescript": "2.5.3",
+    "uglify-js": "3.1.5"
   },
   "devDependencies": {
     "@types/jest": "19.2.4",
