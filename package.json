@@ -37,6 +37,7 @@
     "less": "2.7.2",
     "postcss": "6.0.13",
     "postcss-cli": "4.1.1",
+    "raf": "3.4.0",
     "react": "16.0.0",
     "react-dom": "16.0.0",
     "react-redux": "5.0.6",
@@ -65,6 +66,9 @@
     "watchify": "3.9.0"
   },
   "jest": {
+    "setupFiles": [
+      "<rootDir>/tests/helpers/setup.ts"
+    ],
     "collectCoverageFrom": [
       "src/**/*.(jsx|jsx|ts|tsx)"
     ],
@@ -82,9 +86,9 @@
     "transform": {
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "(/(__tests__|tests)/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "testRegex": "(/(__tests__|tests)/.*|\\.(test|spec))\\.(jsx?|tsx?)$",
     "testPathIgnorePatterns": [
-      "helpers/index.tsx?"
+      "helpers/.*\\.(jsx?|tsx?)$"
     ],
     "moduleFileExtensions": [
       "ts",
