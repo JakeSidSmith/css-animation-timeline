@@ -16,16 +16,10 @@ const mockApp = () => {
 // We have to keep our mock function outside of this context so jest doesn't complain
 jest.mock('../src/ts/app', () => mockApp());
 
-import * as Enzyme from 'enzyme';
 import { mount } from 'enzyme';
-import * as Adapter from 'enzyme-adapter-react-16';
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import App from '../src/ts/app';
-
-Enzyme.configure({
-  adapter: new Adapter()
-});
 
 describe('App', () => {
 
