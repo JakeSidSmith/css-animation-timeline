@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { connect, Dispatch } from 'react-redux';
 import { Store } from '../store';
+import LayersArea from './layers-area';
+import PreviewArea from './preview-area';
+import TimelineArea from './timeline-area';
 
 interface Props {
   count: number;
@@ -16,12 +19,17 @@ export class App extends React.PureComponent<Props> {
     const { count, dispatch } = this.props;
 
     return (
-      <p>
-        Count: {count}
-        <button onClick={() => dispatch(increment())}>
-          Increment
-        </button>
-      </p>
+      <div className="app">
+        <PreviewArea>
+          Preview area
+        </PreviewArea>
+        <LayersArea>
+          Layers area
+        </LayersArea>
+        <TimelineArea>
+          Timeline area
+        </TimelineArea>
+      </div>
     );
   }
 }
