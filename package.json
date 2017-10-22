@@ -61,6 +61,12 @@
     "watchify": "3.9.0"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.(jsx|jsx|ts|tsx)"
+    ],
+    "coveragePathIgnorePatterns": [
+      "src/ts/index.tsx?$"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 100,
@@ -72,9 +78,9 @@
     "transform": {
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "(/(__tests__|tests)/.*|\\.(test|spec))\\.(ts|tsx|js|jsx)$",
+    "testRegex": "(/(__tests__|tests)/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
     "testPathIgnorePatterns": [
-      "helpers/index.tsx"
+      "helpers/index.tsx?"
     ],
     "moduleFileExtensions": [
       "ts",
