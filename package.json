@@ -1,0 +1,56 @@
+{
+  "name": "css-animation-timeline",
+  "version": "0.0.0",
+  "description": "Timeline interface for making CSS animations",
+  "main": "build/js/index.js",
+  "scripts": {
+    "test": "npm run lint && npm run tests -- --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakesidsmith/css-animation-timeline.git"
+  },
+  "keywords": [
+    "css",
+    "animation",
+    "timeline",
+    "tool",
+    "ui"
+  ],
+  "author": "Jake 'Sid' Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakesidsmith/css-animation-timeline/issues"
+  },
+  "homepage": "https://github.com/jakesidsmith/css-animation-timeline#readme",
+  "dependencies": {
+    "@types/react": "16.0.17",
+    "@types/react-dom": "16.0.2",
+    "@types/react-redux": "5.0.10",
+    "autoprefixer": "7.1.6",
+    "browserify": "14.5.0",
+    "envify": "4.1.0",
+    "less": "2.7.2",
+    "postcss": "6.0.13",
+    "postcss-cli": "4.1.1",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "react-redux": "5.0.6",
+    "redux": "3.7.2",
+    "tsify": "3.0.3",
+    "typescript": "2.5.3"
+  },
+  "devDependencies": {
+    "@types/jest": "21.1.4",
+    "@types/node": "8.0.46",
+    "concurrently": "3.5.0",
+    "http-server": "0.10.0",
+    "jest": "21.2.1",
+    "livereload": "0.6.3",
+    "ts-jest": "21.1.3",
+    "tslint": "5.8.0",
+    "tslint-eslint-rules": "4.1.1",
+    "watch-less-do-more": "0.2.0",
+    "watchify": "3.9.0"
+  }
+}
