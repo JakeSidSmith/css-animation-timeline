@@ -19,7 +19,7 @@ jest.mock('../src/ts/app', () => mockApp());
 import { mount } from 'enzyme';
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-import App from '../src/ts/app';
+import App, { mapStateToProps } from '../src/ts/app';
 
 describe('App', () => {
 
@@ -40,5 +40,9 @@ describe('App', () => {
 
     expect(dispatchMock).toHaveBeenCalledWith({type: 'INCREMENT'});
   });
+
+  it('should return the required props', () => {
+    expect(mapStateToProps({counter: 3, foo: 'bar', num: 7} as any)).toEqual({count: 3});
+  })
 
 });
