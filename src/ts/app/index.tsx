@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect, Dispatch } from 'react-redux';
-import { Store } from './store';
+import { Store } from '../store';
 
 interface Props {
   count: number;
