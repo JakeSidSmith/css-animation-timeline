@@ -7,7 +7,7 @@ const mockApp = () => {
   return {
     ...original,
     // Prepropulate our mock
-    default: (props) => <OriginalApp {...props} count={5} />
+    default: (props: any) => <OriginalApp {...props} count={5} />
   };
 };
 
