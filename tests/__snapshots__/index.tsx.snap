@@ -3,6 +3,7 @@
 exports[`App should match snapshot 1`] = `
 <p>
   Count: 
+  5
   <button
     onClick={[Function]}
   >

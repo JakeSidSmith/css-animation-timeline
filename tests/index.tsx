@@ -1,11 +1,13 @@
 const mockApp = () => {
   // Require the un-mocked module to prevent infinite loop
   const original = require.requireActual('../src/ts/app');
+  const { App: OriginalApp } = original;
 
   // Construct a mock from a combination of the original module & a new default
   return {
     ...original,
-    default: original.App
+    // Prepropulate our mock
+    default: (props) => <OriginalApp {...props} count={5} />
   };
 };
 
