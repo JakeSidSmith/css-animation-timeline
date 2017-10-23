@@ -2,11 +2,11 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { Store } from '../../store';
 
-type Props = Only<Store, 'layersAreaWidth'>;
+type Props = Only<Store['layersArea'], 'width'>;
 
 export class LayersArea extends React.PureComponent<Props> {
   public render () {
-    const { children, layersAreaWidth: width } = this.props;
+    const { children, width } = this.props;
 
     return (
       <div className="layers-area" style={{width}}>
@@ -16,9 +16,9 @@ export class LayersArea extends React.PureComponent<Props> {
   }
 }
 
-export const mapStateToProps = ({layersAreaWidth}: Store) => {
+export const mapStateToProps = ({layersArea: {width}}: Store) => {
   return {
-    layersAreaWidth
+    width
   };
 }
 

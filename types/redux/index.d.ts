@@ -83,7 +83,7 @@ declare module 'redux' {
    *   object, and builds a state object with the same shape.
    */
   export function combineReducers <S> (input: {[K in keyof S]: Reducer<S[K]>}):
-    (state: S, action: AnyAction) => S;
+    (state: S | undefined, action: AnyAction) => S;
 
 
   /* store */
