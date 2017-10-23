@@ -20,6 +20,7 @@ export class App extends React.PureComponent<Props> {
   }
 
   public componentDidMount () {
+    this.resizeWindow();
     window.addEventListener('resize', this.resizeWindow);
   }
 
