@@ -11,6 +11,11 @@ exports[`App should match snapshot 1`] = `
   </div>
   <div
     className="layers-area"
+    style={
+      Object {
+        "width": 300,
+      }
+    }
   >
     Layers area
   </div>
