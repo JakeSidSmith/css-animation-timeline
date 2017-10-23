@@ -26,12 +26,12 @@
           "typeLiterals": "always"
         },
         "singleline": {
-          "arrays": "always",
-          "objects": "always",
+          "arrays": "never",
+          "objects": "never",
           "functions": "never",
-          "imports": "always",
-          "exports": "always",
-          "typeLiterals": "always"
+          "imports": "never",
+          "exports": "never",
+          "typeLiterals": "never"
         },
         "esSpecCompliant": true
       }

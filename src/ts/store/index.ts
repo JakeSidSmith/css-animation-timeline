@@ -9,8 +9,8 @@ export interface Store {
 
 export const store = createStore<Store>(combineReducers<Store>({
   layersArea: combineReducers<Store['layersArea']>({
-    ...layersAreaReducers
-  })
+    ...layersAreaReducers,
+  }),
 }));
 
 export default store;

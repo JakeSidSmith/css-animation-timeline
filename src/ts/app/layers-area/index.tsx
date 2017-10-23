@@ -18,8 +18,8 @@ export class LayersArea extends React.PureComponent<Props> {
 
 export const mapStateToProps = ({layersArea: {width}}: Store) => {
   return {
-    width
+    width,
   };
-}
+};
 
 export default connect(mapStateToProps)(LayersArea);
