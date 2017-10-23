@@ -15,5 +15,5 @@ declare type Overwrite<T, U> = {
 } & U;
 
 declare type Only<T, K extends keyof T> = {
-  [P in K]: T[K];
+  [P in K]: T[P];
 }
